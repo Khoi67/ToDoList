@@ -8,9 +8,6 @@ function TaskList(){
         this.arr.push(task);
     };
     
-    this.deleteTask = function(task){
-        this.arr.splice(task, 1);
-    };
     this.timVT = function (id) {
         var index = -1;
     
@@ -23,7 +20,7 @@ function TaskList(){
         return index;
       };
     
-    this.xoaNV = function (id) {
+    this.deleteTask = function (id) {
         var index = this.timVT(id);
     
         if (index !== -1) {

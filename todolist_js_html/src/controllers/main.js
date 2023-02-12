@@ -20,7 +20,7 @@ function renderItem(data) {
             <li>
                 <span>${task.taskName}</span>
                 <div class="buttons">
-                    <button class="remove" onclick="removeTask('${task.id}')">
+                    <button class="remove" onclick="removeTask(${task.id})">
                         <i class="fa fa-trash-alt"></i>
                     </button>
                     <button class="complete" onclick="" >
@@ -49,8 +49,8 @@ getEle("addItem").addEventListener("click", function () {
 /**
  * Delete Task
  */
-function removeTask(task){
-    taskList.deleteTask(task);
+function removeTask(id){
+    taskList.deleteTask(id);
     renderItem(taskList.arr);
     setLocalStorage();
 }
